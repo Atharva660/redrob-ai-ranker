@@ -1,4 +1,4 @@
-# 🚀 Redrob Hackathon: Team Antigravity (Hybrid AI Candidate Ranker)
+# 🚀 Redrob Hackathon: Team Technova (Hybrid AI Candidate Ranker)
 
 This repository contains the winning candidate ranking pipeline for the Redrob AI/ML Engineer hackathon. 
 

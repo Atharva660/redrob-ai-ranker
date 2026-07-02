@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-main.py — Redrob Hackathon — Team Antigravity
+main.py — Redrob Hackathon — Team Technova
 Intelligent Candidate Discovery & Ranking Challenge
 
 Architecture (no GPU, no network, CPU-only, <3 min for 100K):
@@ -18,10 +18,10 @@ Key Design Decisions:
 
 Usage:
   # Full run (with semantic model — needs python download_models.py first):
-  python main.py --candidates candidates.jsonl --out team_antigravity.csv
+  python main.py --candidates candidates.jsonl --out team_technova.csv
 
   # Fast run (rules + BM25 only, no model needed):
-  python main.py --candidates candidates.jsonl --out team_antigravity.csv --no-semantic
+  python main.py --candidates candidates.jsonl --out team_technova.csv --no-semantic
 """
 
 import argparse
@@ -989,7 +989,7 @@ def generate_reasoning(cand: dict, rank: int, components: dict, is_honeypot: boo
 def run(candidates_path: str, output_path: str, use_semantic: bool, debug: bool):
     t_total = time.perf_counter()
     print(f"\n{'='*60}")
-    print("Redrob Hackathon — Team Antigravity")
+    print("Redrob Hackathon — Team Technova")
     print(f"{'='*60}")
 
     # ── Load ──────────────────────────────────────────────────────────────────
@@ -1203,15 +1203,15 @@ def run(candidates_path: str, output_path: str, use_semantic: bool, debug: bool)
 def main():
     parser = argparse.ArgumentParser(
         prog="main.py",
-        description="Redrob Hackathon — Team Antigravity — Candidate Ranker",
+        description="Redrob Hackathon — Team Technova — Candidate Ranker",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
   # Full run (with semantic model):
-  python main.py --candidates candidates.jsonl --out team_antigravity.csv
+  python main.py --candidates candidates.jsonl --out team_technova.csv
 
   # Fast run (no model needed, rules + BM25 only):
-  python main.py --candidates candidates.jsonl --out team_antigravity.csv --no-semantic
+  python main.py --candidates candidates.jsonl --out team_technova.csv --no-semantic
 
   # Sample test:
   python main.py --candidates sample_candidates.json --out test.csv --no-semantic --debug
@@ -1219,7 +1219,7 @@ Examples:
     )
     parser.add_argument("--candidates", default="candidates.jsonl",
                         help="Path to candidates.jsonl or sample_candidates.json")
-    parser.add_argument("--out", default="team_antigravity.csv",
+    parser.add_argument("--out", default="team_technova.csv",
                         help="Output CSV path (must be team_ID.csv per submission spec)")
     parser.add_argument("--no-semantic", action="store_true",
                         help="Skip MiniLM semantic scoring (faster, no model needed)")
